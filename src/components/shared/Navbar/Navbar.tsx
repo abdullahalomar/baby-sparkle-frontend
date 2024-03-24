@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 
 import React from "react";
 
@@ -36,7 +37,7 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Container>
         <Toolbar>
           <Typography
@@ -85,14 +86,54 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography component={Link} href="/login" textAlign="center">
-                  Trending Products
+              <MenuItem className="flex flex-col" onClick={handleCloseNavMenu}>
+                <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
+                  component={Link}
+                  href="/"
+                  textAlign="center"
+                >
+                  Home
                 </Typography>
-                <Typography component={Link} href="/login" textAlign="center">
+
+                <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
+                  component={Link}
+                  href="/"
+                  textAlign="center"
+                >
+                  Categories
+                </Typography>
+                <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
+                  component={Link}
+                  href="/login"
+                  textAlign="center"
+                >
+                  Products
+                </Typography>
+                <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
+                  component={Link}
+                  href="/login"
+                  textAlign="center"
+                >
+                  Flash Sale
+                </Typography>
+                <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
+                  component={Link}
+                  href="/login"
+                  textAlign="center"
+                >
                   About Us
                 </Typography>
-                <Typography component={Link} href="/login" textAlign="center">
+                <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
+                  component={Link}
+                  href="/login"
+                  textAlign="center"
+                >
                   Contact Us
                 </Typography>
               </MenuItem>
@@ -120,21 +161,42 @@ const Navbar = () => {
             <Stack direction="row" onClick={handleCloseNavMenu}>
               <Typography
                 component={Link}
-                href="/register"
+                href="/"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
-                Trending Products
+                Home
               </Typography>
               <Typography
                 component={Link}
-                href="/register"
+                href="/"
+                sx={{ mx: 3, color: "white", display: "block" }}
+              >
+                Categories
+              </Typography>
+              <Typography
+                component={Link}
+                href="/login"
+                sx={{ mx: 3, color: "white", display: "block" }}
+              >
+                Products
+              </Typography>
+              <Typography
+                component={Link}
+                href="/login"
+                sx={{ mx: 3, color: "white", display: "block" }}
+              >
+                Flash Sale
+              </Typography>
+              <Typography
+                component={Link}
+                href="/login"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 About Us
               </Typography>
               <Typography
                 component={Link}
-                href="/register"
+                href="/login"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Contact Us
@@ -146,7 +208,8 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
+                <ManageAccountsIcon fontSize="large" htmlColor="white" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -166,15 +229,21 @@ const Navbar = () => {
               onClose={handleCloseUserMenu}
             >
               {/* settings */}
-              <MenuItem onClick={handleCloseUserMenu}>
+              <MenuItem className="flex flex-col" onClick={handleCloseUserMenu}>
                 <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
                   href="/dashboard"
                   textAlign="center"
                 >
                   Dashboard
                 </Typography>
-                <Typography component={Link} href="/login" textAlign="center">
+                <Typography
+                  className="hover:bg-white px-6 py-2 rounded-sm"
+                  component={Link}
+                  href="/login"
+                  textAlign="center"
+                >
                   Login
                 </Typography>
               </MenuItem>
