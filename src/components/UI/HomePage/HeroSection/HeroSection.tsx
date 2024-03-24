@@ -4,7 +4,7 @@ import CarouselComponent from "@/utils/CarouselComponent/CarouselComponent";
 
 const HeroSection = () => {
   return (
-    <Box>
+    <Box bgcolor="#DFF5FF">
       <Container className="py-10 ">
         <Box sx={{ p: 2, textAlign: "center" }}>
           <Typography component="h3" variant="h3" sx={{ fontWeight: "bold" }}>
