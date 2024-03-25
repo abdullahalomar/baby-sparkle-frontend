@@ -36,7 +36,7 @@ const CarouselComponent = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Box>
+          <Box sx={{ position: "relative" }}>
             <Image
               src={babyOne}
               width={500}
@@ -53,65 +53,121 @@ const CarouselComponent = () => {
               </Typography>
               <Typography>$200.00</Typography>
             </Box>
+            <Box
+              component="span"
+              bgcolor="#3D3D3D"
+              sx={{
+                padding: "4px 10px",
+                borderRadius: "10px",
+                color: "white",
+                position: "absolute",
+                top: 18,
+                left: 18,
+              }}
+            >
+              -13%
+            </Box>
           </Box>
         </SwiperSlide>
         <SwiperSlide>
-          <Box>
+          <Box sx={{ position: "relative" }}>
             <Image
               src={babyTwo}
               width={500}
               height={400}
-              alt="baby image two"
+              alt="baby image one"
               className="mb-2"
             />
             <Typography component="h6" variant="h6">
               Baby Care Store
             </Typography>
-            <Box sx={{ display: "flex", gap: "5px" }}>
+            <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
                 $230
               </Typography>
               <Typography>$200.00</Typography>
             </Box>
+            <Box
+              component="span"
+              bgcolor="#3D3D3D"
+              sx={{
+                padding: "4px 10px",
+                borderRadius: "10px",
+                color: "white",
+                position: "absolute",
+                top: 18,
+                left: 18,
+              }}
+            >
+              -13%
+            </Box>
           </Box>
         </SwiperSlide>
         <SwiperSlide>
-          <Box>
+          <Box sx={{ position: "relative" }}>
             <Image
               src={babyOne}
               width={500}
               height={400}
-              alt="baby image three"
+              alt="baby image one"
               className="mb-2"
             />
             <Typography component="h6" variant="h6">
               Baby Care Store
             </Typography>
-            <Box sx={{ display: "flex", gap: "5px" }}>
+            <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
                 $230
               </Typography>
               <Typography>$200.00</Typography>
             </Box>
+            <Box
+              component="span"
+              bgcolor="#3D3D3D"
+              sx={{
+                padding: "4px 10px",
+                borderRadius: "10px",
+                color: "white",
+                position: "absolute",
+                top: 18,
+                left: 18,
+              }}
+            >
+              -13%
+            </Box>
           </Box>
         </SwiperSlide>
         <SwiperSlide>
-          <Box>
+          <Box sx={{ position: "relative" }}>
             <Image
               src={babyTwo}
               width={500}
               height={400}
-              alt="baby image four"
+              alt="baby image one"
               className="mb-2"
             />
             <Typography component="h6" variant="h6">
               Baby Care Store
             </Typography>
-            <Box sx={{ display: "flex", gap: "5px" }}>
+            <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
                 $230
               </Typography>
               <Typography>$200.00</Typography>
+            </Box>
+            <Box
+              component="span"
+              bgcolor="#3D3D3D"
+              sx={{
+                padding: "4px 10px",
+                borderRadius: "10px",
+                color: "white",
+                position: "absolute",
+                top: 18,
+                left: 18,
+              }}
+            >
+              -13%
             </Box>
           </Box>
         </SwiperSlide>
