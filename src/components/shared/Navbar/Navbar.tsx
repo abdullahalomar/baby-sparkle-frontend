@@ -99,7 +99,7 @@ const Navbar = () => {
                 <Typography
                   className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
-                  href="/"
+                  href="/categories"
                   textAlign="center"
                 >
                   Categories
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <Typography
                   className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
-                  href="/login"
+                  href="/products"
                   textAlign="center"
                 >
                   Products
@@ -115,7 +115,7 @@ const Navbar = () => {
                 <Typography
                   className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
-                  href="/login"
+                  href="/products"
                   textAlign="center"
                 >
                   Flash Sale
@@ -123,7 +123,7 @@ const Navbar = () => {
                 <Typography
                   className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
-                  href="/login"
+                  href="/about-us"
                   textAlign="center"
                 >
                   About Us
@@ -131,7 +131,7 @@ const Navbar = () => {
                 <Typography
                   className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
-                  href="/login"
+                  href="/contact-us"
                   textAlign="center"
                 >
                   Contact Us
@@ -168,35 +168,35 @@ const Navbar = () => {
               </Typography>
               <Typography
                 component={Link}
-                href="/"
+                href="/categories"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Categories
               </Typography>
               <Typography
                 component={Link}
-                href="/login"
+                href="/products"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Products
               </Typography>
               <Typography
                 component={Link}
-                href="/login"
+                href="/products"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Flash Sale
               </Typography>
               <Typography
                 component={Link}
-                href="/login"
+                href="/about-us"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 About Us
               </Typography>
               <Typography
                 component={Link}
-                href="/login"
+                href="/contact-us"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Contact Us
