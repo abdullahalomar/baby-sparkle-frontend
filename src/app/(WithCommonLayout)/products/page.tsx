@@ -15,8 +15,8 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <Container className="mb-20">
-      <Box my={4}>
+    <Container className="mb-24">
+      <Box mt={5} mb={7}>
         <Typography
           sx={{
             fontWeight: "700",
@@ -875,10 +875,10 @@ const page = () => {
           </Box>
         </Grid>
       </Grid>
-      <Box mt={8} mx="auto" sx={{ maxWidth: "400px" }}>
+      <Box mt={15} mx="auto" sx={{ maxWidth: "400px" }}>
         <LinearProgress />
       </Box>
-      <Box mt={3} sx={{ display: "flex", justifyContent: "center" }}>
+      <Box mt={5} sx={{ display: "flex", justifyContent: "center" }}>
         <Typography
           component={Link}
           href="#"

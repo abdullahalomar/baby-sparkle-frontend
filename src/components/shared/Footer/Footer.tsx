@@ -4,6 +4,7 @@ import logo from "@/assets/logo.png";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import Sponsor from "@/components/UI/HomePage/Sponsor/Sponsor";
+const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
@@ -11,7 +12,25 @@ const Footer = () => {
       <Sponsor />
       <Box bgcolor="rgb(17, 26, 34)" py={5}>
         <Container>
-          <div className="px-10 sm:px-20 md:flex md:justify-between lg:flex lg:justify-between">
+          <Box
+            sx={{
+              paddingX: {
+                xs: "120px",
+                sm: "0px",
+                md: "0px",
+                lg: "0px",
+                xl: "0px",
+              },
+              display: {
+                xs: "flex-wrap",
+                sm: "flex",
+                md: "flex",
+                lg: "flex",
+                xl: "flex",
+                justifyContent: "space-around",
+              },
+            }}
+          >
             <Box>
               <Image src={logo} width={150} alt="baby sparkle logo" />
               <Typography sx={{ mx: 3, color: "white", mb: 3 }}>
@@ -87,7 +106,10 @@ const Footer = () => {
                 </Stack>
               </Box>
             </Box>
-          </div>
+          </Box>
+          <Typography mt={4} sx={{ color: "white", textAlign: "center" }}>
+            Copyright &copy; {year} all right reserved
+          </Typography>
         </Container>
       </Box>
     </>
