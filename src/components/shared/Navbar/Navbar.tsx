@@ -131,10 +131,10 @@ const Navbar = () => {
                 <Typography
                   className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
-                  href="/contact-us"
+                  href="/dashboard"
                   textAlign="center"
                 >
-                  Contact Us
+                  Dashboard
                 </Typography>
               </MenuItem>
             </Menu>
@@ -196,10 +196,10 @@ const Navbar = () => {
               </Typography>
               <Typography
                 component={Link}
-                href="/contact-us"
+                href="/dashboard"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
-                Contact Us
+                Dashboard
               </Typography>
             </Stack>
             {/* desktop/laptop device  */}
