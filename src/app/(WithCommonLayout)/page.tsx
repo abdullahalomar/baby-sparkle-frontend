@@ -1,7 +1,7 @@
 import FlashSale from "@/components/UI/HomePage/FlashSale/FlashSale";
 import HeroSection from "@/components/UI/HomePage/HeroSection/HeroSection";
-import PopularProduct from "@/components/UI/HomePage/PopularProduct/PopularProduct";
 import TopCategories from "@/components/UI/HomePage/TopCategories/TopCategories";
+import TrendingProducts from "@/components/UI/HomePage/TrendingProducts/TrendingProducts";
 
 const HomePage = () => {
   return (
@@ -9,7 +9,7 @@ const HomePage = () => {
       <HeroSection />
       <FlashSale />
       <TopCategories />
-      <PopularProduct />
+      <TrendingProducts />
     </>
   );
 };

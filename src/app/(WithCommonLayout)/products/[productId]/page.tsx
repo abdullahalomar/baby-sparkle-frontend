@@ -6,7 +6,22 @@ import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import AssignmentReturnIcon from "@mui/icons-material/AssignmentReturn";
 import HeartRatting from "@/utils/HeartRatting/HeartRatting";
 
-const ProductDetails = () => {
+interface ProductId {
+  params: {
+    productId: string;
+  };
+}
+
+const ProductDetails = async ({ params }: ProductId) => {
+  const res = await fetch(
+    `${process.env.BACKEND_URL}/products/${params.productId}`,
+    {
+      cache: "no-store",
+    }
+  );
+  const product = res.json();
+  console.log(product);
+
   return (
     <Container className="mb-20">
       <Box
@@ -34,7 +49,13 @@ const ProductDetails = () => {
             },
           }}
         >
-          <Image src={babyImage} className="h-[500px]" alt="baby image" />
+          <Image
+            src={product?.data?.image_url}
+            width={400}
+            height={500}
+            className="h-[500px]"
+            alt="baby image"
+          />
         </Box>
         <Box sx={{ maxWidth: "500px" }}>
           <Box
@@ -45,7 +66,7 @@ const ProductDetails = () => {
             }}
           >
             <Typography sx={{ fontSize: "26px", fontWeight: 700 }}>
-              Baby Care Store
+              {product?.data?.title}
             </Typography>
             <HeartRatting />
           </Box>
@@ -63,20 +84,17 @@ const ProductDetails = () => {
             }}
           >
             <Typography sx={{ fontSize: "28px", fontWeight: 400 }}>
-              $54.98
+              {product?.data?.price}
             </Typography>
             <Box sx={{ display: "flex" }}>
               <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
               <Divider orientation="vertical" variant="middle" flexItem />
-              <Typography>( 32 review )</Typography>
+              <Typography>{product?.data?.rating}</Typography>
             </Box>
           </Box>
           <Box mt={5}>
             <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
-              Lorem ipsum dolor sit amet, consectetuer adipi scing elit, sed
-              diam nonummy nibh euismod tincidunt ut laoreet dolore magn. Lorem
-              ipsum dolor sit amet, consectetuer adipi scing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magn.
+              {product?.data?.description}
             </Typography>
             <Box my={4}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>

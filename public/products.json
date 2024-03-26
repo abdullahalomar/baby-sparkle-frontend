@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "image_url": "https://lansinoh.co.uk/cdn/shop/files/16_6a5e8fd1-e957-44f7-a604-f9b4ae3a71f5_1100x.png?v=1700132922",
     "title": "Baby Bottle Set",
     "price": "$15.99",
@@ -9,7 +8,6 @@
     "description": "This baby bottle set comes with three BPA-free bottles designed to reduce colic and nipple confusion."
   },
   {
-    "id": 2,
     "image_url": "https://m.media-amazon.com/images/I/912Wx9NCxKL._AC_UF894,1000_QL80_.jpg",
     "title": "Diaper Bag Backpack",
     "price": "$29.99",
@@ -18,7 +16,6 @@
     "description": "A spacious and stylish diaper bag backpack with multiple compartments for organizing baby essentials."
   },
   {
-    "id": 3,
     "image_url": "https://honestbabyclothing.com/cdn/shop/files/B001ERGY_0_1260x.jpg?v=1688159484",
     "title": "Baby Onesies Pack",
     "price": "$12.99",
@@ -27,7 +24,6 @@
     "description": "A set of five soft and cozy cotton onesies in adorable designs, perfect for everyday wear."
   },
   {
-    "id": 4,
     "image_url": "https://m.media-amazon.com/images/I/81elrEu+PCL.jpg",
     "title": "Interactive Baby Rattle",
     "price": "$8.99",
@@ -36,7 +32,6 @@
     "description": "An interactive baby rattle with colorful beads and textures to stimulate sensory development."
   },
   {
-    "id": 5,
     "image_url": "https://i5.walmartimages.com/asr/6945c8e1-e692-452f-bc7a-f87fd2a51d75.adeda49e801c74dc58e4fee53590c1ac.jpeg",
     "title": "Baby Food Maker",
     "price": "$39.99",
@@ -45,7 +40,6 @@
     "description": "Make fresh, nutritious baby food at home with this easy-to-use baby food maker."
   },
   {
-    "id": 6,
     "image_url": "https://images-cdn.ubuy.ae/6554d844cce1fe21f350746b-pampers-baby-diapers-and-wipes-starter.jpg",
     "title": "Disposable Diapers Pack",
     "price": "$19.99",
@@ -54,8 +48,7 @@
     "description": "A pack of disposable diapers with super-absorbent technology for leak protection."
   },
   {
-    "id": 7,
-    "image_url": "https://www.yarnplaza.com/resize/phil-douce-badjasje-breipatroon-1.jpg/0/1100/True/p-h.jpg",
+    "image_url": "https://static-01.daraz.com.bd/p/d8d3bfddba161a0f674c05be5e7269f4.jpg",
     "title": "Baby Bathrobe",
     "price": "$16.99",
     "rating": 4.4,
@@ -63,7 +56,6 @@
     "description": "Wrap your little one in warmth after bath time with this soft and cozy baby bathrobe."
   },
   {
-    "id": 8,
     "image_url": "https://m.media-amazon.com/images/I/71IGjbjaJEL._SL1500_.jpg",
     "title": "Activity Gym for Babies",
     "price": "$24.99",
@@ -72,7 +64,6 @@
     "description": "An activity gym designed to encourage sensory exploration and gross motor development."
   },
   {
-    "id": 9,
     "image_url": "https://www.nystore.pk/images/product_gallery/1665933786_Portable_USB_Baby_Bottle_Warmer_-_NY-Store_____.JPG",
     "title": "Baby Bottle Warmer",
     "price": "$19.99",
@@ -81,7 +72,6 @@
     "description": "Quickly and safely warm baby bottles and food with this convenient bottle warmer."
   },
   {
-    "id": 10,
     "image_url": "https://images.othoba.com/images/thumbs/0627502_adjustable-reusable-washable-baby-cloth-diaper-with-1-diaper-and-2-pad.webp",
     "title": "Reusable Cloth Diapers",
     "price": "$29.99",
@@ -90,7 +80,6 @@
     "description": "Eco-friendly and adjustable cloth diapers that are gentle on baby's skin and the environment."
   },
   {
-    "id": 11,
     "image_url": "https://mamasandpapas.ae/dw/image/v2/BDSP_PRD/on/demandware.static/-/Sites-MnP-master-catalog/default/dw5fd299bf/images/hi-res/MNP/MNP/216/216902994/216902994_fr.jpg?sw=320&sh=400&sm=fit&q=90",
     "title": "Baby Sleepsuits Set",
     "price": "$22.99",
@@ -99,7 +88,6 @@
     "description": "A set of three soft sleepsuits with snap closures for easy diaper changes during the night."
   },
   {
-    "id": 12,
     "image_url": "https://ifrodoll.com/cdn/shop/products/11_aaf11511-5f3e-4eaf-9019-6719f2f0a61a_1024x1024.jpg?v=1703843972",
     "title": "Plush Baby Toy Set",
     "price": "$14.99",
@@ -108,7 +96,6 @@
     "description": "A set of plush toys in various shapes and textures to keep baby entertained and comforted."
   },
   {
-    "id": 13,
     "image_url": "https://zawadibabyshop.co.ke/wp-content/uploads/2023/09/baby-feeding-chair-nairobi.jpg",
     "title": "Baby High Chair",
     "price": "$49.99",
@@ -117,7 +104,6 @@
     "description": "A sturdy and adjustable high chair with a removable tray for easy cleaning."
   },
   {
-    "id": 14,
     "image_url": "https://cdn.thewirecutter.com/wp-content/media/2023/06/diaperpails-2048px-3752.jpg?auto=webp&quality=75&width=1024",
     "title": "Diaper Pail",
     "price": "$34.99",
@@ -126,7 +112,6 @@
     "description": "Keep odors at bay with this sleek and odor-locking diaper pail."
   },
   {
-    "id": 15,
     "image_url": "https://m.media-amazon.com/images/I/91a2xSovmCL._AC_UL1500_.jpg",
     "title": "Baby Bibs Pack",
     "price": "$9.99",

@@ -6,7 +6,7 @@ import Link from "next/link";
 import babyImage from "@/assets/baby-pic.jpg";
 import babyImage2 from "@/assets/baby-pic-2.jpg";
 
-const PopularProduct = () => {
+const TrendingProducts = () => {
   return (
     <Container className="mb-20">
       <Box
@@ -41,7 +41,7 @@ const PopularProduct = () => {
               marginBottom: "15px",
             }}
           >
-            Most Popular Products
+            Trending Products
           </Typography>
           <Typography
             component="h1"
@@ -633,4 +633,4 @@ const PopularProduct = () => {
   );
 };
 
-export default PopularProduct;
+export default TrendingProducts;
