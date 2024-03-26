@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CarouselComponent from "@/utils/CarouselComponent/CarouselComponent";
 
 const HeroSection = () => {
