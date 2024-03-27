@@ -5,6 +5,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import AssignmentReturnIcon from "@mui/icons-material/AssignmentReturn";
 import HeartRatting from "@/utils/HeartRatting/HeartRatting";
+import { Product } from "@/types";
 
 interface ProductId {
   params: {
@@ -12,9 +13,17 @@ interface ProductId {
   };
 }
 
+// export const generateStaticParams = async () => {
+//   const res = await fetch(`${process.env.BACKEND_URL}/products`);
+//   const products = await res.json();
+//   return products.data.slice(0, 10).map((product: Product) => ({
+//     productId: product._id,
+//   }));
+// };
+
 const ProductDetails = async ({ params }: ProductId) => {
   const res = await fetch(
-    `${process.env.BACKEND_URL}/products/${params.productId}`,
+    `${process.env.BACKEND_URL}/products/${params?.productId}`,
     {
       cache: "no-store",
     }
@@ -50,7 +59,7 @@ const ProductDetails = async ({ params }: ProductId) => {
           }}
         >
           <Image
-            src={product?.data?.image_url}
+            src={babyImage}
             width={400}
             height={500}
             className="h-[500px]"
@@ -66,7 +75,7 @@ const ProductDetails = async ({ params }: ProductId) => {
             }}
           >
             <Typography sx={{ fontSize: "26px", fontWeight: 700 }}>
-              {product?.data?.title}
+              title
             </Typography>
             <HeartRatting />
           </Box>
@@ -84,17 +93,17 @@ const ProductDetails = async ({ params }: ProductId) => {
             }}
           >
             <Typography sx={{ fontSize: "28px", fontWeight: 400 }}>
-              {product?.data?.price}
+              price
             </Typography>
             <Box sx={{ display: "flex" }}>
               <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
               <Divider orientation="vertical" variant="middle" flexItem />
-              <Typography>{product?.data?.rating}</Typography>
+              <Typography>ratting</Typography>
             </Box>
           </Box>
           <Box mt={5}>
             <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
-              {product?.data?.description}
+              description
             </Typography>
             <Box my={4}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>

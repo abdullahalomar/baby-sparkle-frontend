@@ -25,7 +25,7 @@ const TopCategories = () => {
         </Typography>
       </Box>
 
-      <Grid container spacing={3} direction="row" mt={4}>
+      <Grid container spacing={3} mt={4}>
         <Grid
           item
           xs={12}
@@ -34,182 +34,160 @@ const TopCategories = () => {
           lg={4}
           xl={4}
           sx={{
-            maxWidth: "320px",
-            marginLeft: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
-            marginRight: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
-          }}
-        >
-          <Grid
-            item
-            sx={{
-              marginBottom: "30px",
-            }}
-          >
-            <Box sx={{ position: "relative" }}>
-              <Image
-                src={feeding}
-                alt="baby image one"
-                className="rounded-xl mb-2 h-[200px]"
-              />
-              <Typography
-                component="h6"
-                variant="h6"
-                className="absolute bottom-3 left-3"
-              >
-                Feeding
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item>
-            <Box sx={{ position: "relative" }}>
-              <Image
-                src={clothing}
-                alt="baby image one"
-                className="rounded-xl mb-2 h-[200px]"
-              />
-              <Typography
-                component="h6"
-                variant="h6"
-                className="absolute bottom-3 left-3"
-              >
-                Clothing
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          md={4}
-          lg={4}
-          xl={4}
-          sx={{
-            maxWidth: "320px",
-            marginLeft: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
-            marginRight: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
-          }}
-        >
-          <Grid
-            item
-            sx={{
-              marginBottom: "30px",
-            }}
-          >
-            <Box sx={{ position: "relative" }}>
-              <Image
-                src={diapering}
-                alt="baby image one"
-                className="rounded-xl mb-2 h-[200px]"
-              />
-              <Typography
-                component="h6"
-                variant="h6"
-                className="absolute bottom-3 left-3"
-              >
-                Diapering
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item>
-            <Box sx={{ position: "relative" }}>
-              <Image
-                src={toys}
-                alt="baby image one"
-                className="rounded-xl mb-2 h-[200px]"
-              />
-              <Typography
-                component="h6"
-                variant="h6"
-                className="absolute bottom-3 left-3"
-              >
-                Toys
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          md={4}
-          lg={4}
-          xl={4}
-          sx={{
-            maxWidth: "320px",
-            marginLeft: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
-            marginRight: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
-          }}
-        >
-          <Grid
-            item
-            sx={{
-              marginBottom: "30px",
-            }}
-          >
-            <Box sx={{ position: "relative" }}>
-              <Image
-                src={health}
-                alt="baby image one"
-                className="rounded-xl mb-2 h-[200px]"
-              />
-              <Typography
-                component="h6"
-                variant="h6"
-                className="absolute bottom-3 left-3"
-              >
-                Health & Safety
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item>
-            <Box sx={{ position: "relative" }}>
-              <Image
-                src={bathing}
-                alt="baby image one"
-                className="rounded-xl mb-2 h-[200px]"
-              />
-              <Typography
-                component="h6"
-                variant="h6"
-                className="absolute bottom-3 left-3"
-              >
-                Bathing
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-
-        {/* <Grid
-          item
-          xs={12}
-          sm={6}
-          md={4}
-          lg={4}
-          xl={4}
-          sx={{
-            maxWidth: "320px",
-            marginLeft: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
-            marginRight: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
+            marginBottom: "30px",
           }}
         >
           <Box sx={{ position: "relative" }}>
             <Image
-              src={babyImage}
+              src={feeding}
               alt="baby image one"
-              className="rounded-xl mb-2 h-[430px]"
+              className="rounded-xl mb-2 h-[200px]"
             />
             <Typography
-              component="h6"
+              component={Link}
+              href="#"
               variant="h6"
-              className="absolute bottom-3 left-3"
+              className="absolute bottom-3 left-3 bg-green-400 px-3 rounded-lg text-slate-800"
             >
-              Baby Care Store
+              Feeding
             </Typography>
           </Box>
-        </Grid> */}
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={4}
+          xl={4}
+          sx={{
+            marginBottom: "30px",
+          }}
+        >
+          <Box sx={{ position: "relative" }}>
+            <Image
+              src={clothing}
+              alt="baby image one"
+              className="rounded-xl mb-2 h-[200px]"
+            />
+            <Typography
+              component={Link}
+              href="#"
+              variant="h6"
+              className="absolute bottom-3 left-3 bg-green-400 px-3 rounded-lg text-slate-800"
+            >
+              Clothing
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={4}
+          xl={4}
+          sx={{
+            marginBottom: "30px",
+          }}
+        >
+          <Box sx={{ position: "relative" }}>
+            <Image
+              src={diapering}
+              alt="baby image one"
+              className="rounded-xl mb-2 h-[200px]"
+            />
+            <Typography
+              component={Link}
+              href="#"
+              variant="h6"
+              className="absolute bottom-3 left-3 bg-green-400 px-3 rounded-lg text-slate-800"
+            >
+              Diapering
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={4}
+          xl={4}
+          sx={{
+            marginBottom: "30px",
+          }}
+        >
+          <Box sx={{ position: "relative" }}>
+            <Image
+              src={toys}
+              alt="baby image one"
+              className="rounded-xl mb-2 h-[200px]"
+            />
+            <Typography
+              component={Link}
+              href="#"
+              variant="h6"
+              className="absolute bottom-3 left-3 bg-green-400 px-3 rounded-lg text-slate-800"
+            >
+              Toys
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={4}
+          xl={4}
+          sx={{
+            marginBottom: "30px",
+          }}
+        >
+          <Box sx={{ position: "relative" }}>
+            <Image
+              src={health}
+              alt="baby image one"
+              className="rounded-xl mb-2 h-[200px]"
+            />
+            <Typography
+              component={Link}
+              href="#"
+              variant="h6"
+              className="absolute bottom-3 left-3 bg-green-400 px-3 rounded-lg text-slate-800"
+            >
+              Health & Safety
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={4}
+          xl={4}
+          sx={{
+            marginBottom: "30px",
+          }}
+        >
+          <Box sx={{ position: "relative" }}>
+            <Image
+              src={bathing}
+              alt="baby image one"
+              className="rounded-xl mb-2 h-[200px]"
+            />
+            <Typography
+              component={Link}
+              href="#"
+              variant="h6"
+              className="absolute bottom-3 left-3 bg-green-400 px-3 rounded-lg text-slate-800"
+            >
+              Bathing
+            </Typography>
+          </Box>
+        </Grid>
       </Grid>
       <Box mt={7} sx={{ textAlign: "center" }}>
         <Typography

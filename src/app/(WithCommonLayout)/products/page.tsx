@@ -10,6 +10,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Image from "next/image";
 import Link from "next/link";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import { Product } from "@/types";
 
 const page = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/products`, {
@@ -37,7 +38,7 @@ const page = async () => {
         </Typography>
       </Box>
       <Grid container spacing={5}>
-        {products?.data?.map((product: any) => (
+        {products?.data?.map((product: Product) => (
           <Grid
             key={product._id}
             item
@@ -77,7 +78,7 @@ const page = async () => {
                   <Typography component="h6" variant="h6">
                     {product.title}
                   </Typography>
-                  <Link href={`/products/${products.id}`}>
+                  <Link href={`/products/${products?.data?._id}`}>
                     <RemoveRedEyeIcon htmlColor="black" />
                   </Link>
                 </Box>

@@ -12,8 +12,12 @@ import "./CarouselComponent.css";
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 // image
-import babyOne from "@/assets/baby-pic.jpg";
-import babyTwo from "@/assets/baby-pic-2.jpg";
+import feeding from "@/assets/categories/Feeding.jpg";
+import clothing from "@/assets/categories/Clothing.jpg";
+import diapering from "@/assets/categories/Diapering.jpg";
+import toys from "@/assets/categories/Toys.jpg";
+import health from "@/assets/categories/Health & Safety.jpg";
+import bathing from "@/assets/categories/Bathing.jpg";
 
 // import required modules
 import { Pagination as SwiperPagination, Navigation } from "swiper/modules";
@@ -52,13 +56,14 @@ const CarouselComponent = () => {
         <SwiperSlide>
           <Box sx={{ position: "relative" }}>
             <Image
-              src={babyOne}
+              src={feeding}
               width={500}
               height={400}
               alt="baby image one"
+              className="mb-2 rounded-xl h-[220px]"
             />
             <Typography component="h6" variant="h6">
-              Baby Care Store
+              Feeding
             </Typography>
             <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
@@ -85,14 +90,14 @@ const CarouselComponent = () => {
         <SwiperSlide>
           <Box sx={{ position: "relative" }}>
             <Image
-              src={babyOne}
+              src={clothing}
               width={500}
               height={400}
               alt="baby image one"
-              className="mb-2 rounded-xl"
+              className="mb-2 rounded-xl h-[220px]"
             />
             <Typography component="h6" variant="h6">
-              Baby Care Store
+              Clothing
             </Typography>
             <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
@@ -119,14 +124,14 @@ const CarouselComponent = () => {
         <SwiperSlide>
           <Box sx={{ position: "relative" }}>
             <Image
-              src={babyOne}
+              src={diapering}
               width={500}
               height={400}
               alt="baby image one"
-              className="mb-2 rounded-xl"
+              className="mb-2 rounded-xl h-[220px]"
             />
             <Typography component="h6" variant="h6">
-              Baby Care Store
+              Diapering
             </Typography>
             <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
@@ -153,49 +158,14 @@ const CarouselComponent = () => {
         <SwiperSlide>
           <Box sx={{ position: "relative" }}>
             <Image
-              src={babyOne}
+              src={toys}
               width={500}
               height={400}
               alt="baby image one"
-              className="mb-2 rounded-xl"
+              className="mb-2 rounded-xl h-[220px]"
             />
             <Typography component="h6" variant="h6">
-              Baby Care Store
-            </Typography>
-            <Box sx={{ display: "flex", gap: "7px" }}>
-              <Typography variant="body1" component="del">
-                $230
-              </Typography>
-              <Typography>$200.00</Typography>
-            </Box>
-            <Box
-              component="span"
-              bgcolor="#3D3D3D"
-              sx={{
-                padding: "4px 10px",
-                borderRadius: "10px",
-                color: "white",
-                position: "absolute",
-                top: 18,
-                left: 18,
-              }}
-            >
-              -13%
-            </Box>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <Box sx={{ position: "relative" }}>
-            <Image
-              src={babyOne}
-              width={500}
-              height={400}
-              alt="baby image one"
-              className="mb-2 rounded-xl"
-            />
-            <Typography component="h6" variant="h6">
-              Baby Care Store
+              Toys
             </Typography>
             <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
@@ -223,14 +193,49 @@ const CarouselComponent = () => {
           {" "}
           <Box sx={{ position: "relative" }}>
             <Image
-              src={babyOne}
+              src={health}
               width={500}
               height={400}
               alt="baby image one"
-              className="mb-2 rounded-xl"
+              className="mb-2 rounded-xl h-[220px]"
             />
             <Typography component="h6" variant="h6">
-              Baby Care Store
+              Health & Safety
+            </Typography>
+            <Box sx={{ display: "flex", gap: "7px" }}>
+              <Typography variant="body1" component="del">
+                $230
+              </Typography>
+              <Typography>$200.00</Typography>
+            </Box>
+            <Box
+              component="span"
+              bgcolor="#3D3D3D"
+              sx={{
+                padding: "4px 10px",
+                borderRadius: "10px",
+                color: "white",
+                position: "absolute",
+                top: 18,
+                left: 18,
+              }}
+            >
+              -13%
+            </Box>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Box sx={{ position: "relative" }}>
+            <Image
+              src={bathing}
+              width={500}
+              height={400}
+              alt="baby image one"
+              className="mb-2 rounded-xl h-[220px]"
+            />
+            <Typography component="h6" variant="h6">
+              Bathing
             </Typography>
             <Box sx={{ display: "flex", gap: "7px" }}>
               <Typography variant="body1" component="del">
