@@ -2,8 +2,8 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Image from "next/image";
-import LoupeIcon from "@mui/icons-material/Loupe";
 import { Product } from "@/types";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const FlashSale = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/products`, {
@@ -41,7 +41,7 @@ const FlashSale = async () => {
           View All <ChevronRightIcon fontSize="medium" />
         </Typography>
       </Box>
-      <Grid container spacing={2} mt={2}>
+      <Grid container spacing={5} mt={2}>
         {products?.data?.slice(0, 4).map((product: Product) => (
           <Grid
             key={product._id}
@@ -57,41 +57,33 @@ const FlashSale = async () => {
               marginRight: { xs: "40px", sm: "0px", lg: "0px", xl: "0px" },
             }}
           >
-            <Box
-              sx={{
-                position: "relative",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-              }}
-            >
+            <Box sx={{ position: "relative" }}>
               <Image
                 src={product.image_url}
                 width={400}
-                height={400}
+                height={500}
                 alt="baby image one"
                 className="rounded-xl mb-2 h-[370px]"
               />
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <Box>
+              <Box sx={{}}>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                   <Typography component="h6" variant="h6">
                     {product.title}
                   </Typography>
+                  <Link href={`/products/${products.id}`}>
+                    <RemoveRedEyeIcon htmlColor="black" />
+                  </Link>
+                </Box>
+
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                   <Box sx={{ display: "flex", gap: "7px" }}>
                     <Typography variant="body1" component="del">
                       $230
                     </Typography>
                     <Typography>{product.price}</Typography>
                   </Box>
+                  <Typography className="">{product.rating}</Typography>
                 </Box>
-
-                <button>
-                  <LoupeIcon htmlColor="black" />
-                </button>
               </Box>
               <Box
                 component="span"

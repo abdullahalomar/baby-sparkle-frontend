@@ -7,9 +7,12 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Image from "next/image";
-import babyImage from "@/assets/baby-pic.jpg";
+import { Product } from "@/types";
 
-const AllProducts = () => {
+const AllProducts = async () => {
+  const res = await fetch(`${process.env.BACKEND_URL}/products`);
+  const products = await res.json();
+  console.log(products);
   return (
     <Box
       sx={{
@@ -44,48 +47,30 @@ const AllProducts = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                2133
-              </TableCell>
-              <TableCell sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                <Image src={babyImage} width={70} alt="baby image" />
-                <Typography>Double Bed & Dressing</Typography>
-              </TableCell>
-              <TableCell>Renuar</TableCell>
-              <TableCell>2176413876</TableCell>
-              <TableCell>$168.20</TableCell>
-            </TableRow>
-            <TableRow
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                2133
-              </TableCell>
-              <TableCell sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                <Image src={babyImage} width={70} alt="baby image" />
-                <Typography>Double Bed & Dressing</Typography>
-              </TableCell>
-              <TableCell>Renuar</TableCell>
-              <TableCell>2176413876</TableCell>
-              <TableCell>$168.20</TableCell>
-            </TableRow>
-            <TableRow
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                2133
-              </TableCell>
-              <TableCell sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                <Image src={babyImage} width={70} alt="baby image" />
-                <Typography>Double Bed & Dressing</Typography>
-              </TableCell>
-              <TableCell>Renuar</TableCell>
-              <TableCell>2176413876</TableCell>
-              <TableCell>$168.20</TableCell>
-            </TableRow>
+            {products.data.map((product: Product, index: any) => (
+              <TableRow
+                key={product._id}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {index + 1}
+                </TableCell>
+                <TableCell
+                  sx={{ display: "flex", alignItems: "center", gap: 2 }}
+                >
+                  <Image
+                    src={product.image_url}
+                    width={70}
+                    height={10}
+                    alt="baby image"
+                  />
+                  <Typography>{product.title}</Typography>
+                </TableCell>
+                <TableCell>{product.category}</TableCell>
+                <TableCell>{product._id}</TableCell>
+                <TableCell>{product.price}</TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </TableContainer>

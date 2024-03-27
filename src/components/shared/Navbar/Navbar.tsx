@@ -128,14 +128,6 @@ const Navbar = () => {
                 >
                   About Us
                 </Typography>
-                <Typography
-                  className="hover:bg-white px-6 py-2 rounded-sm"
-                  component={Link}
-                  href="/dashboard"
-                  textAlign="center"
-                >
-                  Dashboard
-                </Typography>
               </MenuItem>
             </Menu>
             {/* mobile device */}
@@ -193,13 +185,6 @@ const Navbar = () => {
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 About Us
-              </Typography>
-              <Typography
-                component={Link}
-                href="/dashboard"
-                sx={{ mx: 3, color: "white", display: "block" }}
-              >
-                Dashboard
               </Typography>
             </Stack>
             {/* desktop/laptop device  */}

@@ -118,5 +118,45 @@
     "rating": 4.4,
     "category": "Clothing",
     "description": "A pack of waterproof and easy-to-clean baby bibs with cute and colorful designs."
+  },
+  {
+    "image_url": "https://assets.pkimgs.com/pkimgs/ab/images/dp/wcm/202404/0002/super-soft-animal-baby-hooded-towel-washcloth-set-3-o.jpg",
+    "title": "Hooded Baby Towels Set",
+    "price": "$12.99",
+    "rating": 4.7,
+    "category": "Bathing",
+    "description": "Make bath time fun and safe with this comfortable and durable baby bath tub."
+  },
+  {
+    "image_url": "https://staranddaisy.in/wp-content/uploads/2023/09/baby-bath-tub-vpinkstool-g2.jpg",
+    "title": "Baby Bath Tub",
+    "price": "$19.99",
+    "rating": 4.6,
+    "category": "Bathing",
+    "description": "A pack of waterproof and easy-to-clean baby bibs with cute and colorful designs."
+  },
+  {
+    "image_url": "https://staranddaisy.in/wp-content/uploads/2023/12/Baby-Nail-Clippers-1.jpg",
+    "title": "Baby Nail Clippers Set",
+    "price": "$7.99",
+    "rating": 4.5,
+    "category": "Health & Safety",
+    "description": "Keep your baby's nails trim and tidy with this safe and easy-to-use nail clippers set."
+  },
+  {
+    "image_url": "https://www.momjunction.com/wp-content/uploads/2015/03/How-To-Check-Babys-Temperature-Using-A-Digital-Thermometer-624x702.jpg",
+    "title": "Digital Baby Thermometer",
+    "price": "$15.99",
+    "rating": 4.8,
+    "category": "Health & Safety",
+    "description": "Monitor your baby's temperature accurately and quickly with this digital thermometer designed specifically for babies."
+  },
+  {
+    "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/8/336038339/VH/NC/DU/23585579/safe-o-kid-baby-safety-gate-500x500.jpeg",
+    "title": "Baby Safety Gate",
+    "price": "$29.99",
+    "rating": 4.7,
+    "category": "Health & Safety",
+    "description": "Create a safe environment for your little explorer with this easy-to-install and sturdy baby safety gate."
   }
 ]

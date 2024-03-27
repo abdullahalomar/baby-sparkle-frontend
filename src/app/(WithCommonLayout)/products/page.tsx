@@ -7,27 +7,25 @@ import {
   Typography,
 } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import LoupeIcon from "@mui/icons-material/Loupe";
 import Image from "next/image";
 import Link from "next/link";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const page = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/products`, {
     cache: "no-store",
-    // next: {
-    //   revalidate: 30,
-    // },
   });
   const products = await res.json();
   // console.log(products);
   return (
     <Container className="mb-24">
-      <Box mt={5} mb={7}>
+      <Box mt={5} mb={10}>
         <Typography
           sx={{
             fontWeight: "700",
             fontSize: "36px",
             color: "#3D3D3D",
+            textAlign: "center",
           }}
         >
           Products
@@ -74,28 +72,25 @@ const page = async () => {
                 alt="baby image one"
                 className="rounded-xl mb-2 h-[370px]"
               />
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <Box>
+              <Box sx={{}}>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                   <Typography component="h6" variant="h6">
                     {product.title}
                   </Typography>
+                  <Link href={`/products/${products.id}`}>
+                    <RemoveRedEyeIcon htmlColor="black" />
+                  </Link>
+                </Box>
+
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                   <Box sx={{ display: "flex", gap: "7px" }}>
                     <Typography variant="body1" component="del">
                       $230
                     </Typography>
                     <Typography>{product.price}</Typography>
                   </Box>
+                  <Typography className="">{product.rating}</Typography>
                 </Box>
-
-                <Link href={`/products/${products.id}`}>
-                  <LoupeIcon htmlColor="black" />
-                </Link>
               </Box>
               <Box
                 component="span"
