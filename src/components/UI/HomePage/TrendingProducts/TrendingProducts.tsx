@@ -18,7 +18,7 @@ const TrendingProducts = async () => {
     (product1, product2) => product2.rating - product1.rating
   );
   return (
-    <Container className="mb-20">
+    <Container className="mb-28">
       <Box
         sx={{
           display: {

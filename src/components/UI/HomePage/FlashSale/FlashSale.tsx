@@ -14,7 +14,7 @@ const FlashSale = async () => {
   const products = await res.json();
   console.log(products);
   return (
-    <Container className="mt-16">
+    <Container className="mt-28">
       <Box
         sx={{
           display: "flex",
