@@ -1,0 +1,37 @@
+.flip-down-counter {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 36px;
+}
+
+.time-block {
+  margin: 0 10px;
+}
+
+.digit {
+  border: 2px solid #000;
+  border-radius: 20px;
+  background-color: #4fc77d;
+  color: white;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f0d1f;
+}
+
+/* Media query for small and extra small devices */
+@media only screen and (max-width: 767px) {
+  .flip-down-counter {
+    flex-wrap: wrap;
+  }
+}

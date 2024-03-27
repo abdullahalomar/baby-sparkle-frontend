@@ -4,6 +4,9 @@ import TopCategories from "@/components/UI/HomePage/TopCategories/TopCategories"
 import TrendingProducts from "@/components/UI/HomePage/TrendingProducts/TrendingProducts";
 
 const HomePage = () => {
+  // const res = await fetch(`${process.env.BACKEND_URL}/products`);
+  // const products = await res.json();
+  // console.log(products);
   return (
     <>
       <HeroSection />
