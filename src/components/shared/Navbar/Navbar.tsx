@@ -115,7 +115,7 @@ const Navbar = () => {
                 <Typography
                   className="hover:bg-white px-6 py-2 rounded-sm"
                   component={Link}
-                  href="/products"
+                  href="/flash-sale"
                   textAlign="center"
                 >
                   Flash Sale
@@ -182,7 +182,7 @@ const Navbar = () => {
               </Typography>
               <Typography
                 component={Link}
-                href="/products"
+                href="/flash-sale"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Flash Sale
