@@ -2,8 +2,9 @@ import CountDownTimer from "@/utils/CountDownTimer/CountDownTimer";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import LoupeIcon from "@mui/icons-material/Loupe";
 import { Product } from "@/types";
+
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const FlashSale = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/products`, {
@@ -28,7 +29,7 @@ const FlashSale = async () => {
         </Box>
 
         <Grid container spacing={5}>
-          {products?.data?.slice(0, 6).map((product: Product) => (
+          {products?.data?.map((product: Product) => (
             <Grid
               key={product._id}
               item
@@ -63,28 +64,29 @@ const FlashSale = async () => {
                   alt="baby image one"
                   className="rounded-xl mb-2 h-[370px]"
                 />
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <Box>
+                <Box sx={{}}>
+                  <Box
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <Typography component="h6" variant="h6">
                       {product.title}
                     </Typography>
+                    <Link href={`/products/${product._id}`}>
+                      <RemoveRedEyeIcon htmlColor="black" />
+                    </Link>
+                  </Box>
+
+                  <Box
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <Box sx={{ display: "flex", gap: "7px" }}>
                       <Typography variant="body1" component="del">
                         $230
                       </Typography>
                       <Typography>{product.price}</Typography>
                     </Box>
+                    <Typography className="">{product.rating}</Typography>
                   </Box>
-
-                  <Link href={`/products/${products.id}`}>
-                    <LoupeIcon htmlColor="black" />
-                  </Link>
                 </Box>
                 <Box
                   component="span"
