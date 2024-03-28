@@ -17,7 +17,7 @@ const page = async () => {
     cache: "no-store",
   });
   const products = await res.json();
-  // console.log(products);
+  console.log(products);
   return (
     <Container className="mb-24">
       <Box mt={5} mb={10}>
@@ -78,7 +78,7 @@ const page = async () => {
                   <Typography component="h6" variant="h6">
                     {product.title}
                   </Typography>
-                  <Link href={`/products/${products?.data?._id}`}>
+                  <Link href={`/products/${product?._id}`}>
                     <RemoveRedEyeIcon htmlColor="black" />
                   </Link>
                 </Box>

@@ -22,14 +22,16 @@ interface ProductId {
 // };
 
 const ProductDetails = async ({ params }: ProductId) => {
-  const res = await fetch(
-    `${process.env.BACKEND_URL}/products/${params?.productId}`,
+  console.log(params);
+
+  const product = await fetch(
+    `${process.env.BACKEND_URL}/products/${params.productId}`,
     {
       cache: "no-store",
     }
-  );
-  const product = res.json();
-  console.log(product);
+  ).then();
+  // const product = res.json();
+  console.log(product.json());
 
   return (
     <Container className="mb-20">
