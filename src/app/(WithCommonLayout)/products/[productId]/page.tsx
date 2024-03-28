@@ -1,6 +1,5 @@
 import { Box, Container, Divider, Rating, Typography } from "@mui/material";
 import Image from "next/image";
-import babyImage from "@/assets/baby-pic.jpg";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import AssignmentReturnIcon from "@mui/icons-material/AssignmentReturn";
@@ -13,24 +12,24 @@ interface ProductId {
   };
 }
 
-// export const generateStaticParams = async () => {
-//   const res = await fetch(`${process.env.BACKEND_URL}/products`);
-//   const products = await res.json();
-//   return products.data.slice(0, 10).map((product: Product) => ({
-//     productId: product._id,
-//   }));
-// };
+export const generateStaticParams = async () => {
+  const res = await fetch(`${process.env.BACKEND_URL}/products`);
+  const products = await res.json();
+  return products.data.slice(0, 10).map((product: Product) => ({
+    productId: product._id,
+  }));
+};
 
 const ProductDetails = async ({ params }: ProductId) => {
   console.log(params);
 
   const res = await fetch(
-    `${process.env.BACKEND_URL}/products/${params.productId}`,
+    `${process.env.BACKEND_URL}/products/${params?.productId}`,
     {
       cache: "no-store",
     }
-  ).then();
-  const product = res.json();
+  );
+  const product = await res.json();
   console.log(product);
 
   return (
@@ -61,10 +60,10 @@ const ProductDetails = async ({ params }: ProductId) => {
           }}
         >
           <Image
-            src={babyImage}
+            src={product.data.image_url}
             width={400}
             height={500}
-            className="h-[500px]"
+            className="h-[500px] w-[600px]"
             alt="baby image"
           />
         </Box>
@@ -77,7 +76,7 @@ const ProductDetails = async ({ params }: ProductId) => {
             }}
           >
             <Typography sx={{ fontSize: "26px", fontWeight: 700 }}>
-              title
+              {product.data.title}
             </Typography>
             <HeartRatting />
           </Box>
@@ -95,26 +94,26 @@ const ProductDetails = async ({ params }: ProductId) => {
             }}
           >
             <Typography sx={{ fontSize: "28px", fontWeight: 400 }}>
-              price
+              {product.data.price}
             </Typography>
             <Box sx={{ display: "flex" }}>
               <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
               <Divider orientation="vertical" variant="middle" flexItem />
-              <Typography>ratting</Typography>
+              <Typography>{product.data.rating}</Typography>
             </Box>
           </Box>
           <Box mt={5}>
             <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
-              description
+              {product.data.description}
             </Typography>
             <Box my={4}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <FiberManualRecordIcon fontSize="small" />
                 <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
-                  Lorem ipsum dolor sit amet, adipi scing elit
+                  {product.data.category}
                 </Typography>
               </Box>
-              <Box
+              {/* <Box
                 my={1}
                 sx={{ display: "flex", alignItems: "center", gap: 1 }}
               >
@@ -128,7 +127,7 @@ const ProductDetails = async ({ params }: ProductId) => {
                 <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
                   Lorem ipsum dolor sit amet, adipi scing elit
                 </Typography>
-              </Box>
+              </Box> */}
             </Box>
             <Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
@@ -148,30 +147,20 @@ const ProductDetails = async ({ params }: ProductId) => {
         </Box>
       </Box>
       <Box>
-        <Typography sx={{ fontSize: "26px", fontWeight: 700 }}>
-          Description
-        </Typography>
+        {/* <Typography sx={{ fontSize: "26px", fontWeight: 700 }}>
+          {product.data.description}
+        </Typography> */}
         <Typography my={4} sx={{ fontSize: "17px", fontWeight: 400 }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          {product.data.description}
         </Typography>
         <Box>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <FiberManualRecordIcon fontSize="small" />
             <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
-              Lorem ipsum dolor sit amet, adipi scing elit
+              {product.data.category}
             </Typography>
           </Box>
-          <Box my={1} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          {/* <Box my={1} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <FiberManualRecordIcon fontSize="small" />
             <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
               Lorem ipsum dolor sit amet, adipi scing elit
@@ -182,7 +171,7 @@ const ProductDetails = async ({ params }: ProductId) => {
             <Typography sx={{ fontSize: "17px", fontWeight: 400 }}>
               Lorem ipsum dolor sit amet, adipi scing elit
             </Typography>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </Container>

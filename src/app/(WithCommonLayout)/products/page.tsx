@@ -78,7 +78,7 @@ const page = async () => {
                   <Typography component="h6" variant="h6">
                     {product.title}
                   </Typography>
-                  <Link href={`/products/${product?._id}`}>
+                  <Link href={`/products/${product._id}`}>
                     <RemoveRedEyeIcon htmlColor="black" />
                   </Link>
                 </Box>

@@ -70,7 +70,7 @@ const FlashSale = async () => {
                   <Typography component="h6" variant="h6">
                     {product.title}
                   </Typography>
-                  <Link href={`/products/${products.id}`}>
+                  <Link href={`/products/${product._id}`}>
                     <RemoveRedEyeIcon htmlColor="black" />
                   </Link>
                 </Box>
