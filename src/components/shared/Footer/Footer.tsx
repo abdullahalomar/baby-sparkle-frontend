@@ -51,14 +51,14 @@ const Footer = () => {
               <hr />
               <Typography
                 component={Link}
-                href="/register"
+                href="/trending-products"
                 sx={{ mx: 3, color: "white", display: "block", my: "12px" }}
               >
                 Trending Products
               </Typography>
               <Typography
                 component={Link}
-                href="/register"
+                href="/categories"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Categories/Brands
@@ -72,14 +72,14 @@ const Footer = () => {
               </Typography>
               <Typography
                 component={Link}
-                href="/register"
+                href="about"
                 sx={{ mx: 3, color: "white", display: "block" }}
               >
                 Contact Us
               </Typography>
               <Typography
                 component={Link}
-                href="/register"
+                href="#"
                 sx={{ mx: 3, color: "white", display: "block", my: "12px" }}
               >
                 Customer Care

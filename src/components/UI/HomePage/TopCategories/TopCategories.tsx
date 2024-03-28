@@ -192,7 +192,7 @@ const TopCategories = () => {
       <Box mt={7} sx={{ textAlign: "center" }}>
         <Typography
           component={Link}
-          href="#"
+          href="/categories"
           bgcolor="#282828"
           sx={{
             color: "white",
