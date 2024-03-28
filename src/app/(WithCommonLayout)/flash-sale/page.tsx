@@ -24,7 +24,7 @@ const FlashSale = async () => {
             mb: 13,
           }}
         >
-          <CountDownTimer />
+          {/* <CountDownTimer /> */}
         </Box>
 
         <Grid container spacing={5}>

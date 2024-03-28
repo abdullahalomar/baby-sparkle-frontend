@@ -23,10 +23,7 @@ interface Props {
   window?: () => Window;
 }
 
-export default function Sidebar(
-  { children }: { children: React.ReactNode },
-  props: Props
-) {
+function Sidebar({ children }: { children: React.ReactNode }, props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
@@ -155,3 +152,5 @@ export default function Sidebar(
     </Box>
   );
 }
+
+export default Sidebar;
