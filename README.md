@@ -15,8 +15,6 @@
 
 ### Project Name: Assignment-8 (Baby Care Store Project )
 
-### Live url: [Baby Care Store Project](https://clothex-web.vercel.app/)
-
 ### Project Features:
 
 - Header / NavBar
