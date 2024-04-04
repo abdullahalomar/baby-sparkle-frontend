@@ -60,7 +60,7 @@ const ProductDetails = async ({ params }: ProductId) => {
           }}
         >
           <Image
-            src={product.data.image_url}
+            src={product?.data?.image_url}
             width={400}
             height={500}
             className="h-[500px] w-[600px]"
