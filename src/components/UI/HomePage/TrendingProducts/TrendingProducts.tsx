@@ -12,7 +12,7 @@ const TrendingProducts = async () => {
     },
   });
   const products = await res.json();
-  console.log(products);
+  // console.log(products);
 
   const sortedProducts = [...products?.data].sort(
     (product1, product2) => product2.rating - product1.rating

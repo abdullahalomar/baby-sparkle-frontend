@@ -28,6 +28,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./CountDownTimer.css";
+import { Box } from "@mui/material";
 
 function CounterDownTimer({ initialSeconds }: any) {
   const [timeRemaining, setTimeRemaining] = useState(initialSeconds);
@@ -57,35 +58,35 @@ function CounterDownTimer({ initialSeconds }: any) {
   };
 
   return (
-    <div className="flip-down-counter max-w-[700px] mx-auto">
-      <div className="time-block">
-        <div className="label">Days</div>
-        <div className="digit">{formatTime(timeRemaining).days}</div>
-      </div>
-      <div className="time-block">
-        <div className="label">Hours</div>
-        <div className="digit">{formatTime(timeRemaining).hours}</div>
-      </div>
-      <div className="time-block">
-        <div className="label">Minutes</div>
-        <div className="digit">{formatTime(timeRemaining).minutes}</div>
-      </div>
-      <div className="time-block">
-        <div className="label">Seconds</div>
-        <div className="digit">{formatTime(timeRemaining).seconds}</div>
-      </div>
-    </div>
+    <Box className="flip-down-counter max-w-[700px] mx-auto">
+      <Box className="time-block">
+        <Box className="label">Days</Box>
+        <Box className="digit">{formatTime(timeRemaining).days}</Box>
+      </Box>
+      <Box className="time-block">
+        <Box className="label">Hours</Box>
+        <Box className="digit">{formatTime(timeRemaining).hours}</Box>
+      </Box>
+      <Box className="time-block">
+        <Box className="label">Minutes</Box>
+        <Box className="digit">{formatTime(timeRemaining).minutes}</Box>
+      </Box>
+      <Box className="time-block">
+        <Box className="label">Seconds</Box>
+        <Box className="digit">{formatTime(timeRemaining).seconds}</Box>
+      </Box>
+    </Box>
   );
 }
 
 function App() {
   return (
-    <div className="App">
+    <Box className="App">
       <CounterDownTimer
         initialSeconds={3600 * 24 * 3 + 3600 * 2 + 60 * 25 + 45}
       />{" "}
       {/* 3 days, 2 hours, 25 minutes, 45 seconds */}
-    </div>
+    </Box>
   );
 }
 

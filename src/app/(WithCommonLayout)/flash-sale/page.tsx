@@ -11,7 +11,7 @@ const FlashSale = async () => {
     cache: "no-store",
   });
   const products = await res.json();
-  console.log(products);
+  // console.log(products);
 
   return (
     <Container>

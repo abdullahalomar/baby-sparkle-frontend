@@ -12,7 +12,7 @@ import { Product } from "@/types";
 const AllProducts = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/products`);
   const products = await res.json();
-  console.log(products);
+  // console.log(products);
   return (
     <Box
       sx={{

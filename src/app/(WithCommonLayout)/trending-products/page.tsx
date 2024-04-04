@@ -8,7 +8,7 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 const TrendingProducts = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/products`);
   const products = await res.json();
-  console.log(products);
+  // console.log(products);
 
   const sortedProducts = [...products?.data].sort(
     (product1, product2) => product2.rating - product1.rating

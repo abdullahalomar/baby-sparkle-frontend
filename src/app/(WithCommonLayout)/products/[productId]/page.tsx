@@ -1,10 +1,11 @@
 import { Box, Container, Divider, Rating, Typography } from "@mui/material";
-import Image from "next/image";
+
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import AssignmentReturnIcon from "@mui/icons-material/AssignmentReturn";
 import HeartRatting from "@/utils/HeartRatting/HeartRatting";
 import { Product } from "@/types";
+import Image from "next/image";
 
 interface ProductId {
   params: {
@@ -21,7 +22,7 @@ export const generateStaticParams = async () => {
 };
 
 const ProductDetails = async ({ params }: ProductId) => {
-  console.log(params);
+  // console.log(params);
 
   const res = await fetch(
     `${process.env.BACKEND_URL}/products/${params?.productId}`,
@@ -30,7 +31,7 @@ const ProductDetails = async ({ params }: ProductId) => {
     }
   );
   const product = await res.json();
-  console.log(product);
+  // console.log(product);
 
   return (
     <Container className="mb-20">

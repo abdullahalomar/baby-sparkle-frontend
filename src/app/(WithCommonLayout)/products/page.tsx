@@ -17,7 +17,7 @@ const page = async () => {
     cache: "no-store",
   });
   const products = await res.json();
-  console.log(products);
+  // console.log(products);
   return (
     <Container className="mb-24">
       <Box mt={5} mb={10}>
